@@ -16,10 +16,12 @@ $(document).ready(function() {
     var year = parseInt($('input#year-input').val());
     var results = checkLeapYear(year);
     if (results === true) {
-      $(".print-results").text("That's a leap year!");
+      $(".print-results-true").show();
+      $(".print-results-false").hide();
     }
     else {
-      $(".print-results").text("Thaaaaat's not a leap year.");
+      $(".print-results-false").show();
+      $(".print-results-true").hide();
     }
   });
 });
